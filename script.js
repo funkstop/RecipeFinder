@@ -1,5 +1,6 @@
 // Replace with your actual API key from Spoonacular
 const API_KEY = '8d8d7ce93f324efea6a45fe260de3201';
+let p5Initialized = false;
 
 function getRecipes() {
     const query = document.getElementById('search-input').value;
@@ -28,6 +29,8 @@ function getRecipes() {
         });
 }
 
+
+
 function displayRecipes(recipes) {
     const recipesSection = document.getElementById('recipes-section');
     recipesSection.innerHTML = ""; 
@@ -44,6 +47,8 @@ function displayRecipes(recipes) {
         });
         recipesSection.appendChild(recipeCard);
     });
+
+  
 }
 
 
@@ -72,6 +77,8 @@ function displayRecipeDetails(recipeId) {
             `;
             document.getElementById('recipes-section').style.display = 'none';
             document.getElementById('recipe-details-section').style.display = 'block';
+            const detailsSection = document.getElementById('recipe-details-section');
+            readRecipeDetails(data.title, data.summary);    
         })
         .catch(error => {
             console.error('Error:', error);

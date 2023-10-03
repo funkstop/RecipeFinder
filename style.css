@@ -48,6 +48,37 @@ button:hover {
     background-color: #885378;
 }
 
+#button-section button {
+    display: inline-block;
+    /* Add additional stylings below */
+    margin-right: 10px;  /* Optional: to provide some space between buttons */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#toggle-listening  {
+    background-color: #f5db87;  /* Pastel purple */
+    color: rgba(0, 0, 0, 0.942);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#stop-speaking {
+    background-color: #f5db87;  /* Pastel purple */
+    color: rgba(0, 0, 0, 0.942);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
 header {
     background-color: #879eb6;
     color: white;

@@ -5,17 +5,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>Recipe Finder</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.7.0/p5.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/IDMNYU/p5.js-speech@0.0.3/lib/p5.speech.js"></script>
+
+
+
 </head>
 <body>
     <header>
         <h1>Recipe Finder</h1>
     </header>
-    <section id="random-recipe-section">
-        <button onclick="getRandomRecipe()">Surprise Me with a Random Recipe!</button>
+    <section id="button-section">
+        <button id="toggle-listening">Start Listening</button>
+        <div id="button-section-content">
+            <!-- Buttons will be injected here by p5.js -->
+        </div>
+        <!-- Stop Speaking button will be inserted here by p5.js -->
     </section>
+    
+
     <section id="search-section">
         <input type="text" id="search-input" placeholder="Search by ingredient...">
-        <button onclick="getRecipes()">Find Recipes</button>
+        <button id="search-btn">Find Recipes</button>
+    </section>
+    <section id="random-recipe-section">
+        <!-- Random button will be injected here by p5.js -->
     </section>
 
     <section id="advanced-search-section">
@@ -50,13 +64,12 @@
             <!-- Detailed information will be injected here -->
         </div>
     </section>
-    
-    
     <section id="recipes-section">
         <!-- Recipes will appear here -->
     </section>
 
-
     <script src="script.js"></script>
+    <script src="sketch.js"></script>
+
 </body>
 </html>
