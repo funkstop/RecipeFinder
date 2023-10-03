@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Recipe Finder</title>
+</head>
+<body>
+    <header>
+        <h1>Recipe Finder</h1>
+    </header>
+    <section id="random-recipe-section">
+        <button onclick="getRandomRecipe()">Surprise Me with a Random Recipe!</button>
+    </section>
+    <section id="search-section">
+        <input type="text" id="search-input" placeholder="Search by ingredient...">
+        <button onclick="getRecipes()">Find Recipes</button>
+    </section>
+
+    <section id="advanced-search-section">
+        <h2>Advanced Search</h2>
+        <label for="diet">Diet:</label>
+        <select id="diet">
+            <option value="">Any</option>
+            <option value="vegan">Vegan</option>
+            <option value="vegetarian">Vegetarian</option>
+        <!-- ... other options ... -->
+        </select>
+        <label for="meal-type">Meal Type:</label>
+        <select id="meal-type">
+            <option value="">Any</option>
+            <option value="breakfast">Breakfast</option>
+            <option value="lunch">Lunch</option>
+            <option value="dinner">Dinner</option>
+            <!-- ... other options ... -->
+        </select>
+        <label for="intolerances">Intolerances:</label>
+        <select id="intolerances">
+            <option value="">Any</option>
+            <option value="dairy">Dairy</option>
+            <option value="gluten">Gluten</option>
+            <!-- ... other options ... -->
+        </select>
+        <button onclick="getAdvancedRecipes()">Find Recipes</button>
+    </section>
+    <section id="recipe-details-section" class="recipe-details" style="display:none;">
+        <button id="back-button">Go Back</button>
+        <div id="recipe-details-content">
+            <!-- Detailed information will be injected here -->
+        </div>
+    </section>
+    
+    
+    <section id="recipes-section">
+        <!-- Recipes will appear here -->
+    </section>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
