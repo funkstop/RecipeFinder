@@ -48,7 +48,6 @@ function displayRecipes(recipes) {
         recipesSection.appendChild(recipeCard);
     });
 
-  
 }
 
 
@@ -88,11 +87,11 @@ function displayRecipeDetails(recipeId) {
 
     function getAdvancedRecipes() {
         const query = document.getElementById('search-input').value;
-        const diet = document.getElementById('diet').value;
+        const cuisine = document.getElementById('cuisine').value;
         const mealType = document.getElementById('meal-type').value;
         const intolerances = document.getElementById('intolerances').value;
     
-        const apiUrl = `https://api.spoonacular.com/recipes/complexSearch?query=${query}&diet=${diet}&type=${mealType}&intolerances=${intolerances}&apiKey=${API_KEY}&number=5`;
+        const apiUrl = `https://api.spoonacular.com/recipes/complexSearch?query=${query}&cuisine=${cuisine}&type=${mealType}&intolerances=${intolerances}&apiKey=${API_KEY}&number=5`;
     
         fetch(apiUrl)
             .then(response => {
